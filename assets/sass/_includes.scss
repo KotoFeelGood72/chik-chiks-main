@@ -1,0 +1,38 @@
+// variables,mixins,extends
+@import "helpers/helpers_all";
+@import "family";
+
+// base
+@import "reset";
+@import "fonts";
+@import "base";
+@import "main";
+
+// templates
+@import "templates/header";
+@import "templates/footer";
+@import "templates/popup";
+@import "templates/succes";
+@import "templates/sidebar";
+
+// Blocks
+@import "blocks/sections";
+
+// icons
+@import "icons";
+@import "sprite";
+
+// Page
+
+@import "page/home";
+@import "page/product";
+@import "page/coin";
+@import "page/profile";
+@import "page/history";
+@import "page/cart";
+@import "page/order";
+
+
+// plugins
+@import "plugins/swiper-bundle";
+@import "plugins/stories";

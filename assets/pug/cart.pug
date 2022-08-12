@@ -1,0 +1,129 @@
+extends _lay
+
+block vars
+	- array = {body_class:'', layout_mod:'no_padding', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.cart_head.header_custom 
+		.section_in 
+			.cartHead_main 
+				.cart_back 
+					a(href="javascript: history.go(-1)")
+						img(src="i/left.svg", alt="")
+				.cartHead_title 
+					h1 Корзина
+				.cartHead_remove 
+					a(href="#") Очистить
+	section.cart
+		.section_in 
+			.cart_main 
+				.cartMain_delivery 
+					p Доставим по адресу:
+					.cart_delivery--address
+						input(type="checkbox", name="addressCart" id="address_23")
+						label(for="address_23") 
+							p ул. Героев-Разведчиков, д. 52/110
+							.address_icon
+								img(src="i/right.svg", alt="")
+					ul.cart_list
+						li.cart_item
+							.cart_itemMain  
+								.cart_itemImg 
+									img(src="i/chicken.png", alt="")
+								.cart_itemContent 
+									.cart_itemTitle 
+										h3 Курица гриль
+										p С аппетитной румяной корочкой
+										span 1200 г.
+							.cart_itemBottom 
+								.cart_itemPrice 
+									p 500
+								.products_cartQty 
+									.products_qty.minus_qty 
+										button(type="submit") –
+									.products_qtyInput 
+										input(type="number" value="1" id="qty")
+									.products_qty.plus_qty 
+										button(type="submit") +
+						li.cart_item
+							.cart_itemMain  
+								.cart_itemImg 
+									img(src="i/chicken.png", alt="")
+								.cart_itemContent 
+									.cart_itemTitle 
+										h3 Курица гриль
+										p С аппетитной румяной корочкой
+										span 1200 г.
+							.cart_itemBottom 
+								.cart_itemPrice 
+									p 500
+								.products_cartQty 
+									.products_qty.minus_qty 
+										button(type="submit") –
+									.products_qtyInput 
+										input(type="number" value="1" id="qty")
+									.products_qty.plus_qty 
+										button(type="submit") +
+					.cart_total 
+						p 1000
+	section.cartAction 
+		.cartAction_head 
+			.section_in 
+				.cartHead_main 
+					.cartHead_person--w 
+						.cartHead_personIcon 
+							img(src="i/person.svg", alt="")
+						p Количество персон
+					.products_cartQty 
+						.products_qty.minus_qty 
+							button(type="submit") –
+						.products_qtyInput 
+							input(type="number" value="1" id="qty")
+						.products_qty.plus_qty 
+							button(type="submit") +
+		.cartAction_main 
+			ul.address_popupVariant
+				-
+					var addressItem = [
+						{
+							title: 'Самовывоз',
+							data: 'address1',
+							mod: 'active_tab'
+						},
+						{
+							title: 'Доставка',
+							data: 'address2'
+						},
+					]
+				each item, i in addressItem
+					if i == 0
+						li(data-tab=item.data class=item.mod)=item.title
+					else 
+						li(data-tab=item.data class=item.mod)=item.title
+			.cart_payCoin--w
+				.cart_payCoin
+					p СПИСАТЬ
+					.profileStatus_coin 
+						.profile_coin 
+							p 223
+							.profile_coinIcon 
+								img(src="i/coin.png", alt="")
+						span Chicken Coins
+				.coin_slider--w
+					.coin_slider
+						input(class="range" type="range" name="coins" value="120" min="0" max="312" id="range" oninput="rangenumber.value=value")
+						span.stars
+					.coin_sliderValue 
+						input(type="number" id="rangenumber" min="0" max="100" value="70" oninput="range.value=value")
+						p 312
+		.cartAction_bottom 
+			.section_in 
+				.cartBottom_main 
+					.cart_variant 
+						p СПОСОБ ОПЛАТЫ
+						span Visa, Mastercard
+					.cart_btnPay
+						a(href="#")  
+							p Оплатить
+							span 1000
+
+			

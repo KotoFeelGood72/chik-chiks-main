@@ -1,0 +1,229 @@
+
+
+.order {
+	position: relative;
+	.section_in {
+		padding: 0
+	}
+}
+.secttion_in {
+}
+.orderHead {
+	@include flex-start;
+	padding: 3rem 2rem 2.4rem 2rem;
+	position: relative;
+}
+.orderHead_back {
+	width: 2rem;
+	height: 2rem;
+	@include bp($point_2, $direction:min) {
+		width: 2rem;
+		height: 2rem;
+	}
+	a {
+		width: 100%;
+		height: 100%;
+		@include flex-center;
+	}
+}
+.orderHead_title {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-family: $font_4;
+	transform: translate(-50%, -50%);
+	@include bp($point_2, $direction:min) {
+		font-size: 3rem;
+	}
+}
+
+.order {
+}
+.section_in {
+}
+.order_main {
+}
+.orderHead {
+}
+.orderHead_back {
+}
+.orderHead_title {
+}
+.orderHead_status {
+	position: absolute;
+	right: 2rem;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: $yellow;
+	border-radius: 1rem;
+	padding: .2rem 1.2rem;
+	font-size: 1.2rem;
+	font-family: $font_2;
+}
+.order_map {
+	width: 100%;
+	height: 25.6rem;
+	#map {
+		width: 100%;
+		height: 100%;
+	}
+}
+.orderDetails {
+	background-color: #f3f3f3;
+}
+.orderDetails_main {
+	padding: 2.4rem 0 2rem 0;
+	ul {
+		@include flex-start;
+		li {
+			padding-right: 2rem;
+			border-right: .1rem solid #BABABA;
+			margin-right: 2.5rem;
+			p {
+				margin-bottom: .6rem;
+				font-size: 1.2rem;
+			}
+			span {
+				font-size: 2.6rem;
+				font-family: $font_3;
+				display: flex;
+				position: relative;
+					&:after {
+						content: ' ₽';
+						padding-left: 0.5rem;
+					}
+			}
+			&:nth-child(3) {
+				span {
+					font-size: 1.1rem;
+					font-family: $font_2;
+					color: #7F7F7F;
+					&:after {
+						content: '';
+					}
+				}
+			}
+			&:last-child {
+				margin-right: 0;
+				padding-right: 0;
+				border: none;
+			}
+		}
+	}
+}
+.orderDetails_list {
+}
+.orderDetails_icon {
+	width: 1.6rem;
+	margin-bottom: 1rem;
+}
+.orderProducts {
+	overflow-x: hidden;
+	background: #FFFFFF;
+	border: .1rem solid #E0E0E0;
+	box-shadow: 0px .4rem 3rem rgba(104, 117, 130, 0.05);
+	border-radius: 3.2rem 3.2rem 0 0;
+	position: relative;
+	&:before {
+		position: absolute;
+		top: -.1rem;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: '';
+		background-color: #f3f3f3;
+		z-index: -1;
+	}
+}
+.order_products--w {
+	padding: 3rem 0;
+}
+.orderProductsList {
+}
+.orderProducts_item {
+	@include flex-space;
+	padding: 3rem 0;
+	position: relative;
+	&:before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 140%;
+		height: .1rem;
+		content: '';
+		border-bottom: .1rem solid #C4C4C4;
+		opacity: .5;
+	}
+	&:last-child {
+		padding-bottom: 0;
+		&:before {
+			display: none;
+		}
+	}
+	&:first-child {
+		padding-top: 0;
+	}
+}
+.order_item--content {
+	margin-right: 2rem;
+	min-width: 15rem;
+	p {
+		font-size: 1.8rem;
+		font-family: $font_3;
+	}
+	span {
+		font-size: 1.4rem;
+		display: flex;
+		position: relative;
+		margin: 1rem 0;
+		&:after {
+			content: ' шт.';
+			padding-left: 0.3rem;
+		}
+
+	}
+}
+.order_itemPrice {
+	p {
+		font-size: 2.2rem;
+		&:after {
+			content: '₽';
+			padding-left: 0.3rem;
+		}
+	}
+}
+.order_productsImg {
+	width: 12.5rem;
+	min-width: 12.5rem;
+}
+
+.order_game--btn {
+	margin-top: 1.8rem;
+	a {
+		@include flex-center;
+		font-family: $font_4;
+		font-size: 2.1rem;
+		background-color: $yellow;
+		padding: 1.3rem 1.5rem;
+		border-radius: 1rem;
+		@include bp($point_2, $direction:min) {
+			max-width: 40rem;
+			margin: 0 auto;
+		}
+		p {
+			margin-right: 2.8rem;
+		}
+	}
+}
+.order_game--icon {
+	width: 3.7rem;
+	height: 3.4rem;
+	border-radius: 1rem;
+	@include flex-center;
+	overflow: hidden;
+	background-color: $white;
+	img {
+		width: 2rem;
+		height: 2rem;
+	}
+}

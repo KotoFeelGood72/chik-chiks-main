@@ -1,0 +1,34 @@
+extends _lay
+
+block vars
+	- array = {body_class:'', layout_mod:'no_padding', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.profileHead 
+		.section_in 
+			.profileHead_main 
+				.profileHead_back 
+					a(href="javascript: history.go(-1)")
+						img(src="i/left.svg", alt="")
+				.profileHead_title 
+					h1 Мой профиль
+	section.profile 
+		.section_in 
+			.profile_main 
+				.profile_formWrapper 
+					.profile_form 	
+						.profile_input 
+							label(for="names") Введите ваше имя
+							input(type="text" placeholder="Имя")
+						.profile_input 
+							label(for="names") Введите ваш E-mail
+							input(type="text" placeholder="E-mail")
+					.profileStatus_coin 
+						.profile_coin 
+							p 223
+							.profile_coinIcon 
+								img(src="i/coin.png", alt="")
+						span Chicken Coins
+			.products_action
+				.profile_btnSave 
+					button(type="submit") Сохранить изменения
+					

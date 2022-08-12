@@ -1,0 +1,349 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.hero 
+		.section_in 
+			.hero_mainWrapper 
+				.hero_mainHead 
+					include interface/address
+				.hero_mainBanner 
+					.hero_sliderWrapper 
+						.hero_slider.swiper#stories 
+							.swiper-wrapper
+								-for(i = 0; i < 8; i++)
+									- var txt = ['Видели видео?', 'Что такое Chiken Star?', 'Игра Chicken Star Game', 'Бесплатная доставка', 'Видели видео?', 'Что такое Chiken Star?', 'Игра Chicken Star Game', 'Бесплатная доставка']
+									- var srcBanner = 'i/heroSlide' + i + '.jpg';
+										.swiper-slide.hero_slide 
+											.hero_slideBannerWrapper 
+												.hero_slideBanner
+													img(src=srcBanner, alt="Hero slide banner")
+												.hero_slideTxt 
+													p=txt[i]
+				.hero_mainStock 
+					img(src="i/stock.png", alt="Stock picture")
+	section.homeProducts 
+		.section_in 
+			.homeProducts_main--w
+				ul.products_cat
+						li 
+							a(href="#up" class="products_catLink" id="up-link") 
+								p Наверх
+						li 
+							a(href="#meet" class="products_catLink" id="meet-link") 
+								p Мясо гриль
+						li 
+							a(href="#cocomber" class="products_catLink" id="cocomber-link") 
+								p Овощи гриль
+						li 
+							a(href="#air" class="products_catLink" id="air-link") 
+								p Крылышки	
+						li 
+							a(href="#naggets" class="products_catLink" id="naggets-link") 
+								p Нагетсы
+						li 
+							a(href="#chicken" class="products_catLink" id="chicken-link") 
+								p Курица
+				.homeProducts_main
+					.homeProducts_content 
+						ul.products_tabList
+							-for(i = 0; i < 6; i++)
+								- var catTitle = ['Наверх', 'Мясо гриль', 'Овощи гриль', 'Крылышки', 'Нагетсы', 'Курица']
+								- var catId = ['up', 'meet', 'cocomber', 'air', 'naggets', 'chicken']
+								li(id=catId[i]).observer.products_tabItem 
+										h2=catTitle[i]
+										ul.products_tabContent
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+											li.products_card
+													a(href="/product.html" class="thigger_product") 
+														.products_cardImg 
+															img(src="i/products_1.png", alt="Products picture")
+													.products_cardContent 
+														h3 Куриная грудка
+														.products_cardInfo 
+															.products_cardPrice 
+																p 420
+															.products_cardWidth 
+																span 1200
+														.products_cardBottom
+															.products_cardWidth 
+																span 1200
+															.products_cartQty 
+																.products_qty.minus_qty 
+																	button(type="submit") –
+																.products_qtyInput 
+																	input(type="number" value="1" id="qty")
+																.products_qty.plus_qty 
+																	button(type="submit") +
+															.products_qtyTrigger +
+					.homeProducts_bar 
+						.fly_cart 
+							.fly_cart--main 
+								.fly_cart--head 
+									p Мой заказ
+									a(href="#").fly_cart--delete Очистить 
+								ul.fly_cart--list
+									-for(i = 0; i < 5; i++)
+										li.fry_cart--items 
+											.fly_item--titles 
+												p Шефбургер Де Люкс Острый
+												span 197 г.
+											.products_cartQty 
+												.products_qty.minus_qty 
+													button(type="submit") –
+												.products_qtyInput 
+													input(type="number" value="1" id="qty")
+												.products_qty.plus_qty 
+													button(type="submit") +
+											.fly_cart--price 164
+								.fly_cart--bottom 
+									.fly_cart--time 
+										span Время доставки
+										p 30 - 40 мин
+									.fly_cart--total
+										span Итого
+										p 658
+								.fly_cart--orderBtn 
+									a(href="/cart.html") Оформить заказ

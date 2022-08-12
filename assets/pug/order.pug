@@ -1,0 +1,50 @@
+extends _lay
+
+block vars
+	- array = {body_class:'', layout_mod:'no_padding', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.order 
+		.section_in 
+			.order_main 
+				.orderHead
+					.orderHead_back 
+						a(href="javascript: history.go(-1)")
+							img(src="i/left.svg", alt="")
+					.orderHead_title 
+						h1 Заказ №35
+					.orderHead_status 
+						p В пути
+				.order_map 
+					#map
+	section.orderDetails 
+		.section_in 
+			.orderDetails_main 
+				ul.orderDetails_list
+					li 
+						p Доставка
+						span 0
+					li 
+						p Сумма
+						span 1,750
+					li 
+						.orderDetails_icon 
+							img(src="i/cal.svg", alt="")
+						span 22 окт. 2022 г. в 18:00
+	section.orderProducts 
+		.section_in 
+			.order_products--w 
+				ul.orderProductsList
+					-for(i = 0; i < 3; i++) 
+						li.orderProducts_item 
+							.order_item--content 
+								p Курица гриль S
+								span 1
+								.order_itemPrice 
+									p 500
+							.order_productsImg 
+								img(src="i/chicken.png", alt="")
+				.order_game--btn
+					a(href="#")  
+						p Сыграть в игру
+						.order_game--icon 
+							img(src="i/coin.png", alt="")

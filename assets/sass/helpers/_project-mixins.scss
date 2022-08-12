@@ -1,0 +1,8 @@
+@mixin app {
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	border: none;
+	font-family: $font_1;
+	font-size: $font_size_base;
+}

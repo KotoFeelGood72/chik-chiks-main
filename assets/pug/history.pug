@@ -1,0 +1,78 @@
+extends _lay
+
+block vars
+	- array = {body_class:'', layout_mod:'no_padding', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.history_head.header_custom 
+		.section_in 
+			.historyHead_main 
+				.historyHead_back 
+					a(href="javascript: history.go(-1)")
+						img(src="i/left.svg", alt="")
+				.historyHead_title 
+					h1 История заказов
+	section.history 
+		.section_in 
+			.history_main 
+				ul.history_order
+					-for(i = 0; i < 3; i++)
+						if(i == 1)
+							li.history_item
+								.history_orderNumber 12
+								.historyHead_content 
+									.history_itemDate 
+										p 28 Окт в 20:21
+									.history_itemDel На доставку
+									.history_itemTitle ул. Героев-Разведчиков, д. 52/1, кв. 121
+									ul.history_product 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="")
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="") 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="") 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="") 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="")
+									.history_itemBottom 
+										.history_itemPrice 500
+										.history_itemCoin 
+											p 35
+											.history_coinImg 
+												img(src="i/coin.png", alt="")
+										.history_orderBtn 
+											a(href="#") Повторить заказ
+						else 
+							li.history_item
+								.history_orderNumber 12
+								.historyHead_content 
+									.history_itemDate 
+										p 28 Окт в 20:21
+									.history_itemDel На доставку
+									.history_itemTitle ул. Героев-Разведчиков, д. 52/1, кв. 121
+									ul.history_product 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="")
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="") 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="") 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="") 
+										li 
+											a(href="/order.html")
+												img(src="i/chicken.png", alt="")
+									.history_itemBottom 
+										.history_itemPrice 500
+										.history_orderBtn 
+											a(href="#") Повторить заказ

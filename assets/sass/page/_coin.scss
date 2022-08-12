@@ -1,0 +1,129 @@
+.coin {
+	background-color: $white;
+	box-shadow: 0px 1rem 1rem rgba(104, 117, 130, 0.2);
+	border-radius: 0 0 3.2rem 3.2rem;
+	z-index: 2;
+	position: relative;
+	@include bp($point_2, $direction:min) {
+		box-shadow: none;
+		border-radius: none;
+		max-width: 120rem;
+		margin: 0 auto;
+	}
+}
+.section_in {
+}
+.coin_mainWrapper {
+	text-align: center;
+	padding-top: 3.1rem;
+}
+.coin_head {
+	@include flex-start;
+	position: relative;
+	margin-bottom: 2.2rem;
+	h1 {
+		font-size: 1.6rem;
+		font-family: $font_4;
+		@include bp($point_2, $direction:min) {
+			font-size: 3rem;
+		}
+	}
+}
+.coin_back {
+	width: 2rem;
+	height: 2rem;
+	@include bp($point_2, $direction:min) {
+		width: 2rem;
+		height: 2rem;
+	}
+	a {
+		@include flex-center;
+		width: 100%;
+		height: 100%;
+	}
+}
+.coin_headTitle {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.coing_imgWrapper {
+	width: 17rem;
+	margin: 0 auto;
+	margin-bottom: 1.5rem;
+	border-radius: 100%;
+	overflow: hidden;
+	@include bp($point_2, $direction:min) {
+		margin-top: 4rem;
+	}
+}
+.coin_col {
+	p {
+		font-size: 6.4rem;
+		color: $yellow;
+		font-family: $font_4;
+	}
+}
+.coin_subtitle {
+	padding-bottom: 3.5rem;
+	p {
+		font-size: 2.4rem;
+		font-family: $font_3;
+	}
+}
+.coin_content {
+	background-color: #F3F3F3;
+	z-index: -1;
+	margin-top: -2rem;
+	@include bp($point_2, $direction:min) {
+		background-color: $white;
+	}
+	.section_in {
+		padding: 0;
+	}
+	.products_action {
+		display: block;
+		position: static;
+	}
+}
+.coinContent_main {
+	padding: 5.6rem 2rem 6.8rem 2rem;
+	p {
+		font-size: 1.4rem;
+		@include bp($point_2, $direction:min) {
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+		}
+	}
+}
+.products_action {
+}
+.coinMoney {
+	width: 100%;
+	height: 6rem;
+	border-radius: 1rem;
+	overflow: hidden;
+	a {
+		@include flex-center;
+		background-color: $yellow;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		font-size: 2.1rem;
+		font-family: $font_4;
+		@include bp($point_2, $direction:min) {
+			max-width: 40rem;
+			margin: 0 auto;
+			border-radius: 2rem;
+		}
+		p {
+			margin-right: 0.7rem;
+
+		}
+		span {
+			display: flex;
+			color: $white;
+		}
+	}
+}

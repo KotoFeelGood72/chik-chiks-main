@@ -1,0 +1,55 @@
+footer.footer 
+	.section_in 
+		.footer_main 
+			.footer_main--top 
+				ul.footer_col--menus 
+					li.footer_col--item
+						p О нас
+						ul.footer_nav--menu 
+							each item in ['О нас', 'Блог', 'Рецепты', 'Секреты']
+								li 
+									a(href="#")=item
+					li.footer_col--item
+						p Работа
+						ul.footer_nav--menu 
+							each item in ['Курьер', 'Повар', 'Администратор']
+								li 
+									a(href="#")=item
+					li.footer_col--item
+						p Партнерам
+						ul.footer_nav--menu 
+							each item in ['Франшиза', 'Инвестиции', 'Поставщикам']
+								li 
+									a(href="#")=item
+					li.footer_col--item
+						p Клиентам
+						ul.footer_nav--menu 
+							each item in ['Мой профиль', 'Истории заказа', 'Соглашение']
+								li 
+									a(href="#")=item
+				.footer_app--details 
+					ul.footer_app--list 
+						each item in ['app', 'google']
+							li 
+								a(href="#")
+									img(src=`i/${item}.png`, alt="") 
+					.footer_col--info 
+						.footer_col--number 
+							a(href="#") 8 800 333-00-60
+							p Звонок бесплатный
+						.footer_col--mail 
+							a(href="#") chicken@mail.ru 
+			.footer_main--bottom
+				.footer_bottom--left 
+					.footer_copyright CHICKEN STAR © 2022
+					ul.footer_help 
+						each item in ['Политика конфиднециальности', 'Публичная оферта', 'Правила акций']
+							li 
+								a(href="#")=item
+				.footer_bottom--right
+					ul.footer_social 
+						each item in ['vk', 'ok', 'tg']
+							li 
+								a( target="_blank" href="#")
+									img(src=`i/${item}.png`, alt="") 
+									 

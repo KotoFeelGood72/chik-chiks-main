@@ -1,0 +1,342 @@
+.products {
+	// box-shadow: 0px .4rem 1.5rem rgba(104, 117, 130, 0.2);
+	// border-radius: 3.2rem 3.2rem 0 0;
+	position: relative;
+	opacity: 0;
+	visibility: hidden;
+	@include z-index(popup);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: $white;
+	transition: all .3s ease;
+	transform: translateY(-2rem);
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		transform: translateY(0);
+		.products_detailsContentWrapper {
+			@include bp($point_2, $direction:min) {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+	@include bp($point_2, $direction:min) {
+		box-shadow: none;
+		border-radius: none;
+		@include flex-center;
+		background-color: rgba(255, 255, 255, 0.492);
+		padding: 3rem;
+	}
+}
+.section_in {
+}
+.products_main {
+	padding-bottom: 12rem;
+	background-color: $white;
+	@include bp($point_2, $direction:min) {
+		@include flex-start;
+		flex-wrap: wrap;
+		padding: 2rem;
+		align-items: flex-start;
+		position: relative;
+		max-width: 120rem;
+		box-shadow: 0px .4rem 1.5rem rgba(104, 117, 130, 0.2);
+		border-radius: 3.2rem;
+		overflow: hidden;
+	}
+}
+.products_imgWrapper {
+	width: 25rem;
+	margin: 0 auto;
+	padding: 2rem;
+	@include bp($point_2, $direction:min) {
+		max-width: 45%;
+		margin-bottom: 7rem;
+		width: 100%;
+		margin-right: 5rem;
+	}
+}
+.products_content {
+	padding: 0 2rem;
+	@include bp($point_2, $direction:min) {
+		max-width: 50%;
+		margin-bottom: 3rem;
+	}
+	h1 {
+		font-size: 2.6rem;
+		font-family: $font_4;
+		margin-bottom: 2rem;
+		@include bp($point_2, $direction:min) {
+			font-size: 3.4rem;
+		}
+	}
+}
+.products_btn--details {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	right: 0;
+	width: 2.7rem;
+	height: 2.7rem;
+	@include flex-center;
+	border: .2rem solid $yellow;
+	border-radius: 100%;
+	font-size: 1.8rem;
+	font-family: $font_4;
+	color: $yellow;
+	@include bp($point_2, $direction:min) {
+		display: none;
+	}
+}
+.productsContent_head {
+	position: relative;
+}
+.trigger_details {
+}
+.products_detailsContentWrapper {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	@include flex-end;
+	flex-direction: column;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .3s ease;
+	@include z-index(popup);
+	@include bp($point_2, $direction:min) {
+		max-width: 120rem;
+		position: static;
+		opacity: 0;
+		visibility: hidden;
+	}
+	&.active {
+		opacity: 1;
+		visibility: visible;
+		.products_detailsContent {
+			transform: translateY(0);
+		}
+	}
+}
+.products_shorts {
+	margin-bottom: 2rem;
+	max-height: 13rem;
+	height: 13rem;
+	overflow-y: auto;
+	p {
+		font-size: 1.4rem;
+		@include bp($point_2, $direction:min) {
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+		}
+	}
+}
+.productsDetails_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+	opacity: .4;
+	@include bp($point_2, $direction:min) {
+		display: none;
+	}
+}
+.products_detailsContent {
+	position: relative;
+	background-color: $yellow;
+	border-radius: 3.2rem 3.2rem 0 0;
+	padding: 3.1rem 2.1rem 2.3rem;
+	width: 100%;
+	transition: all .3s ease;
+	transform: translateY(100%);
+	@include bp($point_2, $direction:min) {
+		transform: translateY(0);
+		margin-bottom: 5rem;
+		border-radius: 3rem;
+		position: static;
+	}
+	p {
+		font-size: 1.8rem;
+		font-family: $font_3;
+		text-align: center;
+		margin-bottom: 2.5rem;
+	}
+}
+.pruducts_detailsList {
+	li {
+		@include flex-space;
+		padding-bottom: 1.3rem;
+		margin-bottom: 1.3rem;
+		border-bottom: .1rem solid rgba(0, 0, 0, 0.05);
+		@include bp($point_2, $direction:min) {
+			padding-bottom: 1rem;
+			margin-bottom: 1rem;
+		}
+		&:last-child {
+			// padding-bottom: 0;
+			margin-bottom: 0;
+			// border-bottom: .1rem solid transparent;
+		}
+		span {
+			display: flex;
+			font-family: $font_3;
+			@include bp($point_2, $direction:min) {
+				font-size: 2.2rem;
+			}
+		}
+		p {
+			margin-bottom: 0;
+			font-size: 1.4rem;
+			font-family: $font_2;
+			@include bp($point_2, $direction:min) {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+.products_short {
+	padding-bottom: 2.5rem;
+	p {
+		font-family: $font_11;
+		margin-bottom: 1rem;
+		@include bp($point_2, $direction:min) {
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+			font-family: $font_2;
+		}
+	}
+	span {
+		display: flex;
+		font-family: $font_11;
+		@include bp($point_2, $direction:min) {
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+			font-family: $font_2;
+		}
+	}
+}
+
+
+
+.products_action {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: $blue;
+	padding: 2.6rem 3.3rem 2.4rem 3.3rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
+	grid-gap: .9rem;
+	border-radius: 3.2rem 3.2rem 0 0;
+	z-index: 99;
+	@include bp($point_2, $direction:min) {
+		position: static;
+		border-radius: 3.2rem;
+	}
+}
+.products_qtyWrapper {
+	@include flex-space;
+	background-color: $white;
+	border-radius: 1rem;
+	max-width: 15.1rem;
+	width: 100%;
+	@include bp($point_2, $direction:min) {
+		max-width: 30rem;
+	}
+}
+.products_btnMinus {
+	margin-top: -0.3rem;
+}
+.btn_qty {
+	width: 5rem;
+	@include flex-center;
+	button {
+		min-height: 6rem;
+		font-size: 2.3rem;
+		cursor: pointer;
+		@include bp($point_2, $direction:min) {
+			font-size: 3.6rem;
+		}
+	}
+}
+.products_Input {
+	input {
+		@include app;
+		background-color: transparent;
+		width: 4rem;
+		min-height: 6rem;
+		text-align: center;
+		@include bp($point_2, $direction:min) {
+			font-size: 3.6rem;
+		}
+	}
+}
+.input_qty {
+}
+.products_btnPlus {
+}
+.products_btnCart {
+	background-color: $yellow;
+	@include flex-center;
+	flex-direction: column;
+	border-radius: 1rem;
+	padding: .8rem 1rem;
+	cursor: pointer;
+	@include bp($point_2, $direction:min) {
+		flex-direction: row;
+	}
+	p {
+		font-size: 1.3rem;
+		font-family: $font_3;
+		margin-bottom: 0.2rem;
+		text-transform: uppercase;
+		@include bp($point_2, $direction:min) {
+			font-size: 2rem;
+			margin-right: 3rem;
+		}
+	}
+	span {
+		display: flex;
+		color: $white;
+		font-size: 2.3rem;
+		font-family: $font_4;
+		@include bp($point_2, $direction:min) {
+			font-size: 3.6rem;
+		}
+		&:after {
+			content: ' ₽';
+			padding-left: 0.5rem;
+		}
+	}
+}
+
+.product_close {
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+	@include bp($point_2, $direction:min) {
+		@include flex-center;
+		width: 3rem;
+		height: 3rem;
+		top: 2.5rem;
+		z-index: 3;
+		cursor: pointer;
+	}
+	img {
+		object-fit: cover
+	}
+	a {
+		@include flex-center;
+		width: 100%;
+		height: 100%;
+	}
+}

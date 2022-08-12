@@ -1,0 +1,160 @@
+//------------------------------------------------------------layout
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	height: $header;
+	width: 100%;
+
+
+	will-change: transform;
+	@include z-index(popup);
+	@include flex-center;
+
+	height: $header_mob;
+	transition: all .4s ease;
+}
+
+
+.header {
+	@include bp($point_2, $direction:min) {
+		height: 12.2rem
+		
+	}
+}
+.section_in {
+}
+.header_main {
+	@include flex-space;
+	padding: 3rem 0 1.7rem 0;
+	@include bp($point_2, $direction:min) {
+		padding: 3rem 0;
+
+	}
+}
+.header_burger {
+	width: 2.5rem;
+	min-width: 2.5rem;
+	height: 1.8rem;
+	margin-right: 4.8rem;
+	cursor: pointer;
+	@include bp($point_2, $direction:min) {
+		width: 3.6rem;
+		height: 2.8rem;
+	}
+}
+.header_info {
+	a {
+		@include flex-start;
+	}
+}
+.header_logo {
+	width: 3rem;
+	margin-right: 0.8rem;
+	@include bp($point_2, $direction:min) {
+		width: 6rem;
+		margin-right: 2rem;
+	}
+}
+.header_delivery {
+	@include bp($point_2, $direction:min) {
+		display: none;
+	}
+	p {
+		margin-right: .7rem;
+		font-size: 1.8rem;
+		font-family: $font_4;
+	}
+	@include flex-start;
+		margin-right: 4.2rem;
+		@include bp($point_2) {
+			margin-right: 3rem;
+		}
+}
+.header_delIcon {
+	@include flex-center;
+	margin-top: 0.2rem;
+	width: 1.7rem;
+	@include bp($point_2) {
+		width: 1.3rem
+	}
+}
+.icon {
+}
+.icon-down {
+}
+.header_coinWrapper {
+	@include flex-start;
+}
+.header_coin {
+	color: $yellow;
+	font-family: $font_4;
+	margin-right: 0.7rem;
+	@include bp($point_2, $direction:min) {
+		font-size: 2.6rem;
+		margin-right: 1.5rem;
+	}
+}
+.header_coinIcon {
+	width: 3rem;
+	@include bp($point_2, $direction:min) {
+		width: 4rem
+	}
+}
+
+.address_wrapper {
+	@include flex-start;
+	margin-bottom: 2.1rem;
+	input {
+		@include app;
+		font-size: 1.4rem;
+			font-weight: 400;
+	}
+	// .address_icon {
+	// 	margin-right: 1.6rem;
+	// 	width: 1.9rem;
+	// 	@include flex-center;
+	// }
+}
+
+.header_title {
+	font-size: 4rem;
+	color: $yellow;
+	font-family: $font_4;
+	@include bp($point_2) {
+		display: none;
+	}
+}
+
+.address_mod {
+	@include flex-start;
+	margin-bottom: 2rem;
+	@include bp($point_2) {
+		margin-bottom: 0;
+	}
+	.address_inputWrapper {
+		margin-right: 2rem;
+		input {
+			min-width: 32rem;
+			@include bp($point_2) {
+				min-width: 100%;
+			}
+		}
+		@include bp($point_2) {
+			margin-right: 0;
+		}
+	}
+	.header_delivery {
+		display: flex;
+		margin-bottom: 1.6rem;
+		cursor: pointer;
+		margin-right: 0;
+		p {
+			font-size: 1.8rem;
+		}
+		@include bp($point_2) {
+			display: none;
+		}
+	}
+}

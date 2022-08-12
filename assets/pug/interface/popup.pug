@@ -1,0 +1,233 @@
+.address_popup.popup 
+	.popup_bg 
+	.popup_main.address_popupMain 
+		.address_popupTrigger 
+		ul.address_popupVariant
+			-
+				var addressItem = [
+					{
+						title: 'Самовывоз',
+						data: 'address1',
+						mod: 'active_tab'
+					},
+					{
+						title: 'Доставка',
+						data: 'address2'
+					},
+				]
+			each item, i in addressItem
+				if i == 0
+					li(data-tab=item.data class=item.mod)=item.title
+				else 
+					li(data-tab=item.data class=item.mod)=item.title
+		.addres_content--tab
+			.address_content(data-tab="address1" class="active_tab") 
+				h4 Мои адреса
+				ul.address_list 
+					li.address_item 
+						input(type="radio", name="address" id="address_1")
+						label(for="address_1") 
+							p ул. Героев-Разведчиков, д. 52/110
+							span.address_change
+					li.address_item 
+						input(type="radio", name="address" id="address_2")
+						label(for="address_2") 
+							p ул. Героев-Разведчиков, корп. 2 д. 152/110
+							span.address_change
+				.address_btn 
+					button(type="submit") Забрать отсюда
+			.address_content(data-tab="address2") 
+				h4 Адрес самовывоза
+				ul.address_list 
+					li.address_item 
+						input(type="radio", name="addressNew" id="address_11")
+						label(for="address_11") 
+							p.mod_after ул. Героев-Разведчиков, д. 52/110
+							span.address_change
+					li.address_item 
+						input(type="radio", name="addressNew" id="address_22")
+						label(for="address_22") 
+							p.mod_after ул. Героев-Разведчиков, корп. 2 д. 152/110
+							span.address_change
+				.address_btn 
+					button(type="submit") Забрать отсюда
+
+.burger_popup.popup 
+	.popup_bg 
+	.burger_popupMain
+		.close 
+			img(src="i/close.svg", alt="")
+		.burger_coin 
+			p 312
+			.burger_coinIcon 
+				img(src="i/coin.png", alt="")
+		.burger_logo 
+			img(src="i/logo.jpg", alt="")
+		ul.burger_social 
+			each item in ['vk', 'ok', 'tg']
+				li 
+					a( target="_blank" href="#")
+						img(src=`i/${item}.png`, alt="")
+		ul.burgerMain_nav 
+				li 
+					a(href="/profile.html") Мой профиль
+				li 
+					a(href="/history.html") История заказов
+				li 
+					a(href="#") О нас 
+		ul.burgerOther_nav 
+			each item in ['Пользовательское соглашение', 'Политика конфиденциальности', 'Публичная оферта', 'Программа лояльности', 'Полные правила акций']
+				li 
+					a(href="#")=item
+
+// Phone
+
+.phone_submit.popup 
+	.phone_submitBg.popup_bg 
+	.phone_submit--main
+		.phone_submit--close.close
+			img(src="i/left.svg", alt="") 
+		.phone_submitHead 
+			p Введите ваш номер
+			.phone_submit--input 
+				input(type="tel" placeholder="+ 7 (909) 449-49-99")
+		.phone_submit--medium 
+			a(href="#") Обработка персональных данных
+		.phone_submit--bottom 
+			a(href="#") Получить код  
+.phone_code.popup 
+	.phone_submitBg.popup_bg 
+	.phone_submit--main
+		.phone_submit--close.close
+			img(src="i/left.svg", alt="") 
+		.phone_submitHead 
+			p Введите код из смс
+			.code_submit--input.fieldset
+				label.box 
+					<input class="field" type="number" placeholder="•">
+				label.box 
+					<input class="field" type="number" placeholder="•">
+				label.box 
+					<input class="field" type="number" placeholder="•">
+				label.box 
+					<input class="field" type="number" placeholder="•">
+		.phone_submit--medium 
+			p Изменить номер
+		.phone_submit--bottom.mod_timer 
+			a(href="#")!='Повторная отправка через <span id="rocket">00:55</span>'
+
+
+.stories 
+	.stories_bg 
+	.stories_main
+		.close_stories
+			img(src="i/close.svg", alt="")
+		.slide(data-slide="slide")
+			-for(i = 0; i < 5; i++)
+				.slide-items
+					img(src="i/chickends.jpg", alt="")
+					.slide_item_content 
+						p Бесплатная достаавка от 111 р.
+						span Бесплатная доставка при заказе от 699 рублей. При меньшей сумме заказа стоимость доставки равна 99р.
+						.quote_txt Берегите свое время
+			.slide-nav 
+				.slide-thumb 
+				button.slide-prev
+				button.slide-next
+
+
+
+.minicart 
+	.minicart_bg 
+	.mini_cart--main
+		a(href="/cart.html") 
+			.minicart_btn 
+				p В корзину
+				span.cart_counter 399
+
+
+
+
+
+section.products 
+	.products_main
+		.product_close
+			img(src="i/closes.svg", alt="") 
+		.products_imgWrapper 
+			img(src="i/chicken.png", alt="")
+		.products_content
+			.productsContent_head
+				h1 Курица гриль
+				.products_btn--details.trigger_details !
+			.products_shorts 
+				p Курицу гриль с аппетитной румяной корочкой и божественным ароматом восточных специй любят абсолютно все, независимо от пола, возраста и социального статуса. 
+			.products_detailsContentWrapper
+				.productsDetails_bg
+				.products_detailsContent 
+					p Пищевая ценность, 100 г.
+					ul.pruducts_detailsList 
+						-
+							var items = [
+								{
+									title: 'Калорийность',
+									value: '161 Ккал',
+								},
+								{
+									title: 'Углеводы',
+									value: '17 г.',
+								},
+								{
+									title: 'Жиры',
+									value: '5,66 г.',
+								},
+								{
+									title: 'Белки',
+									value: '9,22 г.',
+								},
+								{
+									title: 'Вес',
+									value: '380 г.',
+								},
+							]
+						each item in items 
+							li 
+								p=item.title 
+								span=item.value
+			.products_short 
+				p Ингридиенты: курица, соль, перец, масло растительное
+				span 1200 г.
+		.products_action 
+			.products_qtyWrapper 
+				.products_btnMinus.btn_qty 
+					button –
+				.products_Input.input_qty 
+					input(type="number", name="qty" value="1")
+				.products_btnPlus.btn_qty 
+					button +
+			.products_btnCart 
+				p Добавить
+				span 420
+
+
+
+
+
+.wallet 
+	.wallet_bg 
+	.wallet_main
+		p Способы оплаты 
+		ul.wallet_list 
+			li.wallet_item 
+				input(type="radio", name="wallet" id="walletOne")
+				label(for="walletOne") Банковские карты
+			li.wallet_item 
+				input(type="radio", name="wallet" id="walletTwo")
+				label(for="walletTwo") Наличные
+
+
+
+.loader 
+	.loader_main 
+		<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+			<circle cx="50" cy="50" r="46"/>
+		</svg>

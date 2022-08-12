@@ -1,0 +1,29 @@
+extends _lay
+
+block vars
+	- array = {body_class:'', layout_mod:'no_padding', sub_keywords:'', title_inner:'HOME'}
+block content_block
+	section.coin 
+		.section_in 
+			.coin_mainWrapper 
+				.coin_head 
+					.coin_back 
+						a(href="javascript: history.go(-1)")
+							img(src="i/left.svg", alt="")
+					.coin_headTitle 
+						h1 Баланс
+				.coing_imgWrapper 
+					img(src="i/coin.png", alt="")
+				.coin_col 
+					p 312
+				.coin_subtitle 
+					p Chicken Coins
+	section.coin_content 
+		.section_in 
+			.coinContent_main 
+				p Курицу гриль с аппетитной румяной корочкой и божественным ароматом. Курицу гриль с аппетитной румяной корочкой и божественным ароматом восточных специй любят абсолютно все, независимо от пола, возраста и социального статуса. 
+			.products_action
+				.coinMoney
+					a(href="#")  
+						p Потратить
+						span 312 Coins
